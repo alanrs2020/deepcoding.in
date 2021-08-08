@@ -1,6 +1,6 @@
 {
-  "name": "functions",
-  "description": "Cloud Functions for Firebase",
+  "name": "deepcodingdotin",
+  "description": "Website For Personl Posts",
   "scripts": {
     "start": "node index.js",
     "devStart": "nodemon index.js"
@@ -13,5 +13,30 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "nodemon": "^2.0.12"
-  }
+  },
+  "version": "2.0.1",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanrs2020/deepcoding.in.git"
+  },
+  "keywords": [
+    "webpage",
+    "java",
+    "python",
+    "deepcoding",
+    "ai",
+    "ml",
+    "html",
+    "nodejs",
+    "expressapp",
+    "firebase",
+    "flutter"
+  ],
+  "author": "alan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alanrs2020/deepcoding.in/issues"
+  },
+  "homepage": "https://github.com/alanrs2020/deepcoding.in#readme"
 }
