@@ -1,0 +1,114 @@
+*{
+	margin: 0;
+	font-family: Arial, sans-serif;
+}
+body{
+	background-color: #333;
+	background-size: cover;
+	width: 100%;
+	height: wrap-content;
+}
+#body1{
+	width: 70%;
+	display: inline-block;
+	position: absolute;
+	padding: 10px 10px;
+	height: wrap-content;
+	background-color: #fff;
+}
+.editor
+        {
+			border:solid 1px #ccc;
+			padding: 20px;
+			width: 90%;
+			min-height:1000px;
+			max-height: wrap-content;
+        }
+#side{
+	width: 20%;
+	display: inline-block;
+	position: relative;
+	padding: 10px 10px;
+
+}
+#bbutton{
+	padding: 10px 20px;
+	border: none;
+	border-radius: 10px;
+	background-color: #ffd;
+	color: #333;
+}
+#bbutton:hover{
+	background-color: #ffb;
+}
+#tagbox{
+	font-size: 1.5em;
+	width: 100%;
+	height: 200px;
+}
+#side ul{
+	list-style: none;
+}
+#side ul li{
+	display: block;
+
+	padding: 10px 20px;
+	color: #ffb;
+}
+#side ul li button{
+	display: block;
+	color: #333;
+	padding: 10px 20px;
+	background-color: #ffd;
+}
+button{
+	border: none;
+	background-color: #ffb;
+	color: #333;
+	padding: 10px 20px;
+}
+#barhead{
+	padding: 20px 20px;
+	color: #ffd;
+	display: inline-block;
+}
+#heading{
+	font-size: 2.5em;
+	height: 50px;
+	margin: 10px;
+	width: 80%;
+	padding: 10px 10px;
+}
+#topbar{
+	background-color: #333;
+	height: 70px;
+	top: 0;
+	z-index: 5;
+	position: fixed;
+	width: 100%;
+}
+#save{
+	padding: 20px 20px;
+	margin: 10px;
+	border: none;
+	background-color: #333;
+	color: #ffd;
+}
+#main{
+	width: 100%;
+	top: 60px;
+	display: inline-block;
+	position: absolute;
+	height: 100%;
+}
+
+@media(max-width: 1000px){
+
+	#body1{
+		display: block;
+		width: 100%;
+	}
+	#side{
+		width: 100%;
+	}
+}

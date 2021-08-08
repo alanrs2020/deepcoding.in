@@ -1,0 +1,71 @@
+*{
+	margin: 0;
+	overflow-x: hidden;
+}
+body{
+	background-color: #333;
+	background-size: cover;
+	margin: auto;
+}
+#topbar{
+	padding: 20px 20px;
+	background-color: #333;
+	height: 50px;
+	width: 100%;
+}
+h1{
+	padding: 20px 20px;
+}
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]{
+ display:none!important;
+}
+#bbutton{
+	padding: 10px 20px;
+	border: none;
+	text-decoration: none;
+	border-radius: 10px;
+	background-color: #ffd;
+	color: #333;
+}
+#bbutton:hover{
+	background-color: #ffb;
+}
+#body1{
+	width: 50%;
+	height: 800px;
+	margin: auto;
+	background-color: #ffd;
+	padding: 20px 20px;
+	box-shadow: 2px 2px 15px 10px #000;
+	display: block;
+}
+#body1 .input{
+	width: 90%;
+	height: 50px;
+	margin: 20px 20px;
+}
+#body1 label{
+	padding: 10px 10px;
+	color: #333;
+}
+#error{
+	height: wrap-content;
+	padding: 10px 10px;
+	width: 100%;
+	color: rgb(255,0,0);
+	background-color: #333;
+
+}
+#submit{
+	width: 100px;
+	border: none;
+	background-color: #333;
+	color: #ffb;
+	border-radius: 50px;
+	height: 50px;
+}
+@media(max-width:900px) {
+	#body1{
+		width: max-content;
+	}	
+}

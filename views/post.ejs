@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image" href="/images/logodc.png">
+<title>DeepCoding</title>
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#nav-bar{
+    height: 70px;
+    width: 100%;
+    background-color: antiquewhite;
+
+}
+h3{
+    color: #333;
+    font-size: 4em;
+}
+#main-body{
+    max-width: 800px;
+    margin: auto;
+
+}
+#keywords{
+    width: 100%;
+    height: 200px;
+    background-color: blanchedalmond;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+</style>
+<body>
+<div id="nav-bar">
+</div>
+    <div id="main-body">
+        <div id="title">
+            
+            
+        </div>
+        <div id="content">
+            
+        </div>
+        <div id="keywords">
+            <i style="position: relative; bottom:0;">&copy; Deepcoding.in 2021</i>
+        </div>
+    </div>
+    
+</body>
+<script type="text/javascript">
+ 
+    const postId = "<%= postId %>";
+    var titlediv = document.getElementById('title')
+    var contentBody = document.getElementById('content')
+    
+    var x = document.createElement('h1')
+    var firebaseConfig = {
+        apiKey: "AIzaSyDgEYdaGVAoBFs4kgA4Wj2tOCStlKW2fqk",
+        authDomain: "deepcodingdotin.firebaseapp.com",
+        databaseURL: "https://deepcodingdotin-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "deepcodingdotin",
+        storageBucket: "deepcodingdotin.appspot.com",
+        messagingSenderId: "726999565321",
+        appId: "1:726999565321:web:154321a13b381e06e0a4d8",
+        measurementId: "G-QM7Z8N1M9Z"
+      };
+      // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    
+    //"start": "npm run shell",
+    
+    var ref = firebase.database().ref('posts');
+    
+    
+        ref.child(postId).on('value', (snapshot)=>{
+            var data = snapshot.val()
+            console.log(data['title'])
+            var a = document.createElement("h3")
+            a.innerText = data['title'];
+    
+            titlediv.appendChild(a)
+    
+            contentBody.innerHTML = data['content']
+            
+            var keyword = document.createElement('p')
+            keyword.innerText = data['keywords']
+            document.getElementById('keywords').appendChild(keyword)
+        })
+    
+    
+    </script>
+</html>

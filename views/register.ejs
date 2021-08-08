@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <link rel="icon" type="image/jpg" href="images/logodc.png">
+	  <link rel="stylesheet" type="text/css" href="css/banner.css">
+	 <link rel="stylesheet" type="text/css" href="css/scrollbar.css">
+	 <link rel="stylesheet" type="text/css" href="css/signin1.1.css">
+	  <meta name="descrition" content="Programming tutorials,PHP,Java,javascript,flutter,flutter dev,android application,learn programming,learn coding,python, SQL,MySQL, full stack developer,Web development,Deep Coding">
+    <meta name="application-name" content="Deep Coding">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Register Now</title>
+</head>
+<body>
+	<div id="topbar">
+		<a href="/login" id="bbutton" >Back</a>
+	</div>
+    
+<div id="body1">
+	<h1>Register Now</h1>
+	<form method="post" action="" enctype="multipart/form-data">
+		<div id="error">
+			<span><?php echo $error;  ?></span>
+		</div>
+		<label>First Name:</label>
+		<input type="text" name="firstname" id="firstname" placeholder="Enter your first name." class="input">
+		<br>
+		<label>Last Name:</label>
+		<input type="text" name="lastname" id="lastname" placeholder="Enter your last name." class="input">
+<br>
+		<label>Email Id</label>
+		<input type="email" name="email" id="email" placeholder="Enter your email id." class="input">
+<br>
+		<label>Date of Birth</label>
+		<input type="date" name="dob" id="dob" class="input">
+<br>
+		<label>Password:</label>
+		<input type="Password" name="password" id="pass1" placeholder="Enter password." class="input">
+<br>
+		<label>Confirm Password:</label>
+		<input type="password" name="password2" id="pass2" placeholder="Re-enter password." class="input">
+		<br>
+		<input type="submit" name="register" id="submit" value="Register">
+	</form>
+</div>
+</body>
+</html>
