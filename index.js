@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const server = require('http').Server(app)
 
-const port = process.env.port || 4455
+const port = process.env.PORT
 
 
 
@@ -15,12 +15,13 @@ app.use(express.static('public'))
 app.get('/explore', (request, response)=>{
     response.render('posts')
 })
-app.get('/logo', (request,response)=>{
+app.get('/logo', (request,response)=>{ 
     response.sendFile('images/logodc.png')
 })
 app.get('/', (request, response)=>{
     response.render('index');
 })
+
 
 app.get('/login',(req,res)=>{
     res.render('login')
@@ -32,7 +33,5 @@ app.get("/postid/:name/:post",(request, response)=>{
     response.render('post', { postId: request.params.post })
     
 })
-server.listen(port,err=>{
-    console.log("Listening port "+port)
-})
+server.listen(process.env.PORT || 3000)
 
