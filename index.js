@@ -1,9 +1,12 @@
 const { render } = require('ejs');
 const express = require('express');
+const app = express();
+const server = require('http').Server(app)
+
 const port = process.env.port || 4455
 
 
-const app = express();
+
 
 app.set('view engine', 'ejs')
 app.set('views', './views');
@@ -29,7 +32,7 @@ app.get("/postid/:name/:post",(request, response)=>{
     response.render('post', { postId: request.params.post })
     
 })
-app.listen(port,err=>{
+server.listen(port,err=>{
     console.log("Listening port "+port)
 })
 
