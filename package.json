@@ -2,7 +2,7 @@
   "name": "functions",
   "description": "Cloud Functions for Firebase",
   "scripts": {
-    "start": "npm index.js",
+    "start": "node index.js",
     "devStart": "nodemon index.js"
   },
   "engines": {
